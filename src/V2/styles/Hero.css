@@ -1,0 +1,246 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 120px 32px 60px;
+  position: relative;
+  background: radial-gradient(circle at 80% 20%, rgba(94, 234, 212, 0.08), transparent 50%),
+    radial-gradient(circle at 10% 80%, rgba(232, 163, 61, 0.08), transparent 50%);
+}
+
+.hero__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.hero__eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  color: #5eead4;
+  font-size: 0.85rem;
+  margin-bottom: 18px;
+  letter-spacing: 0.02em;
+}
+
+.hero__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.hero__title-accent {
+  color: #e8a33d;
+}
+
+.hero__role {
+  font-size: 1.25rem;
+  color: #cbd5e1;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.hero__tagline {
+  font-size: 1.02rem;
+  color: #94a3b8;
+  max-width: 480px;
+  line-height: 1.6;
+  margin-bottom: 36px;
+}
+
+.hero__cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 26px;
+  border-radius: 6px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.btn--primary {
+  background-color: #e8a33d;
+  color: #0b1120;
+}
+
+.btn--primary:hover {
+  transform: translateY(-2px);
+  background-color: #f3b65b;
+}
+
+.btn--ghost {
+  border-color: #334155;
+  color: #f5f3ee;
+}
+
+.btn--ghost:hover {
+  transform: translateY(-2px);
+  border-color: #5eead4;
+  color: #5eead4;
+}
+
+/* Terminal card */
+.hero__terminal {
+  background-color: #111827;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.5);
+}
+
+.hero__terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background-color: #0d1424;
+  border-bottom: 1px solid #1e293b;
+}
+
+.hero__dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.hero__dot--red {
+  background-color: #f87171;
+}
+
+.hero__dot--yellow {
+  background-color: #fbbf24;
+}
+
+.hero__dot--green {
+  background-color: #34d399;
+}
+
+.hero__terminal-title {
+  margin-left: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: #64748b;
+}
+
+.hero__terminal-body {
+  padding: 24px 22px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.88rem;
+  line-height: 1.9;
+  min-height: 230px;
+}
+
+.hero__terminal-line {
+  color: #f5f3ee;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hero__terminal-line:first-child,
+.hero__terminal-line:nth-last-child(2) {
+  opacity: 1;
+  transform: none;
+}
+
+.hero__terminal-line--indent {
+  padding-left: 24px;
+}
+
+.hero__terminal-line--indent.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.hero__token-fn {
+  color: #5eead4;
+}
+
+.hero__token-key {
+  color: #93c5fd;
+}
+
+.hero__token-value {
+  color: #fbbf8e;
+}
+
+.hero__terminal-cursor {
+  margin-top: 10px;
+  color: #5eead4;
+}
+
+.hero__blinker {
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: #64748b;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 24px;
+  background-color: #334155;
+}
+
+@media (max-width: 900px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__terminal {
+    order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 110px 20px 60px;
+  }
+
+  .hero__terminal-body {
+    font-size: 0.78rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__terminal-line,
+  .hero__blinker {
+    transition: none;
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

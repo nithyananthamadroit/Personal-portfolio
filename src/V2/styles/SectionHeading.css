@@ -1,0 +1,17 @@
+.section-heading {
+  margin-bottom: 44px;
+}
+
+.section-heading__tag {
+  font-family: 'JetBrains Mono', monospace;
+  color: #5eead4;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.section-heading__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+  font-weight: 700;
+  color: #f5f3ee;
+}

@@ -1,0 +1,46 @@
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.skills__card {
+  background-color: #111827;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 26px 28px;
+  transition: border-color 0.2s ease;
+}
+
+.skills__card:hover {
+  border-color: #5eead4;
+}
+
+.skills__category {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.05rem;
+  color: #f5f3ee;
+  margin-bottom: 16px;
+}
+
+.skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills__pill {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  background-color: #0d1424;
+  color: #93c5fd;
+  border: 1px solid #1e293b;
+  border-radius: 20px;
+  padding: 6px 14px;
+}
+
+@media (max-width: 768px) {
+  .skills__grid {
+    grid-template-columns: 1fr;
+  }
+}

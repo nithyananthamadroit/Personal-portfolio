@@ -1,0 +1,79 @@
+.achievements__timeline {
+  position: relative;
+  border-left: 1px solid #1e293b;
+  padding-left: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.achievement-item {
+  position: relative;
+}
+
+.achievement-item__marker {
+  position: absolute;
+  left: -48px;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #0b1120;
+  border: 2px solid #e8a33d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.achievement-item__marker::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #e8a33d;
+}
+
+.achievement-item__year {
+  position: absolute;
+  left: -132px;
+  top: -1px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: #64748b;
+  width: 70px;
+  text-align: right;
+}
+
+.achievement-item__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  color: #f5f3ee;
+  margin-bottom: 8px;
+}
+
+.achievement-item__detail {
+  color: #94a3b8;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+@media (max-width: 600px) {
+  .achievements__timeline {
+    padding-left: 28px;
+  }
+
+  .achievement-item__marker {
+    left: -36px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .achievement-item__year {
+    position: static;
+    display: block;
+    text-align: left;
+    margin-bottom: 6px;
+    width: auto;
+  }
+}

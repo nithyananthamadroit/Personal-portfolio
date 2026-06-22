@@ -1,0 +1,15 @@
+.section {
+  padding: 100px 32px;
+  border-top: 1px solid #1e293b;
+}
+
+.section__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 70px 20px;
+  }
+}
